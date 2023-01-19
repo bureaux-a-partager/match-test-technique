@@ -1,5 +1,21 @@
 <script>
 export default {
+  data() {
+    return {
+      username: "",
+      password: "",
+    };
+  },
+  methods: {
+    onSubmit() {
+      this.$emit("submit", this.username, this.password);
+    },
+  },
+  computed: {
+    isDisabled() {
+      return !this.username || !this.password;
+    },
+  },
 };
 </script>
 
