@@ -51,11 +51,17 @@ In order to test your solution you can:
 ## Vue test
 ### Task description
 Your task is to create a simple login form component in Vue.
-The form should consist of two input fields: one for username and one for password. Each input should update its value attribute on input change.
+
+The form should consist of two input fields: one for username and one for password.
+
+Each input should update its value attribute on input change.
 
 There should also be a Submit button. It should emit the submit event when clicked.
-The onSubmit listener is dened in the parent component and accepts two parameters: username and password (in that order).
+
+The onSubmit listener is defined in the parent component and accepts two parameters: username and password (in that order).
+
 When the Submit button is clicked, the submit event should be emitted with $emit.
+
 The application uses Vue 3.
 
 Requirements
