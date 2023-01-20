@@ -1,9 +1,16 @@
 version: '3.1'
 services:
     php:
-        build: docker/linux
+        build: docker/php
         working_dir: /application
         volumes:
-            - '.:/application'
+            - './php-project:/application'
+
+    node:
+        build: docker/node
+        working_dir: /application
+        tty: true
+        volumes:
+            - './vue-project:/application'
         ports:
             - '5173:5173'

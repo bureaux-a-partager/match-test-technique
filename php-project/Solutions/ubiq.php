@@ -1,6 +1,6 @@
 <?php
 
-function solutionUbiq($a): ?int
+function solutionUbiq(array $a): ?int
 {
     return null;
 }
