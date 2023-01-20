@@ -37,7 +37,7 @@ For example, given:
 ```
 
 the function should return 5, as explained above.
-Write an ecient algorithm for the following assumptions: N is an integer within the range [5..100,000]; each element of array A is an integer within the range [1..1,000,000,000].
+Write an eficient algorithm for the following assumptions: N is an integer within the range [5..100,000]; each element of array A is an integer within the range [1..1,000,000,000].
 
 ### Test my solution
 In order to test your solution you can:
