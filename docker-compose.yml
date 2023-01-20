@@ -1,6 +1,6 @@
 version: '3.1'
 services:
-    php-fpm:
+    php:
         build: docker/linux
         working_dir: /application
         volumes:
