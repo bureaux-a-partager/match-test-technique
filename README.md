@@ -41,7 +41,7 @@ Write an ecient algorithm for the following assumptions: N is an integer within 
 
 ### Test my solution
 In order to test your solution you can:
- - Run containers with ```make up```
+ - Run containers with ```make up``` (first build can take a few minutes to run)
  - ```make test-tiny``` to run your solution against tiny data list
  - ```make test-small``` to run your solution against small data list
  - ```make test-medium``` to run your solution against medium data list
