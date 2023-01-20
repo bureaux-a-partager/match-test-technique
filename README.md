@@ -65,9 +65,9 @@ When the Submit button is clicked, the submit event should be emitted with $emit
 The application uses Vue 3.
 
 Requirements
-- Create an input element for the username eld. It should have its id set to username-input and type attribute set to text.
+- Create an input element for the username field. It should have its id set to username-input and type attribute set to text.
 - The username input should update its value attribute on being changed with the entered username.
-- Create an input element for the password eld. It should have its id set to password-input and type attribute set to password.
+- Create an input element for the password field. It should have its id set to password-input and type attribute set to password.
 - The password input should update its value attribute on being changed with the entered password.
 - Create a Submit button with its id set to login-button.
 - The Submit button should be disabled (disabled attribute set to true) until both username and password fields are lled.
