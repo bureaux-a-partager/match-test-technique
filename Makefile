@@ -19,4 +19,4 @@ php-test-medium: ## Run medium tests
 php-test-large: ## Run large tests
 	docker compose exec php bash -c "php main.php large"
 php-test-custom: ## Run large tests
-	docker compose exec php bash -c "php main.php custom $(list)"
+	docker compose exec php bash -c "php main.php custom $(input)"
