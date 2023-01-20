@@ -103,6 +103,24 @@ class Runner
     }
 
     /**
+     * Test the solution with custom data
+     *
+     * @param array input $input the input data generated
+     * @return void
+     */
+    public function testCustom(Report $report, array $data): void
+    {
+        $len = count($data);
+        $report->startTest('Custom lenght test: ' . $len . ' entries', $len);
+        foreach($this->getData($len) as $input) {
+            $res = $this->runSolution($input);
+            $report->addEntry(...$res);
+        }
+
+        $report->printLastTest();
+    }
+
+    /**
      * Generates data
      *
      * @return array
