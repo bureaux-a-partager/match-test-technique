@@ -1,6 +1,6 @@
 <?php
 
-function solutionUbiq($a): int
+function solutionUbiq(array $a): int
 {
     $mins = [];
     if (count($a) < 5) {

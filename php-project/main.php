@@ -1,7 +1,7 @@
 <?php
 
-require_once('./php-project/Runner.php');
-require_once('./php-project/Report.php');
+require_once('./Runner.php');
+require_once('./Report.php');
 
 $availableTests = ['tiny', 'small', 'medium', 'large'];
 $testToRun = $argv[1] ?? 'tiny';

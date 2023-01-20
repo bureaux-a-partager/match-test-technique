@@ -1,8 +1,8 @@
 <?php
 
-require_once("./php-project/Solutions/candidate.php");
-require_once("./php-project/Solutions/ubiq.php");
-require_once("./php-project/Report.php");
+require_once("./Solutions/candidate.php");
+require_once("./Solutions/ubiq.php");
+require_once("./Report.php");
 
 class Runner
 {
