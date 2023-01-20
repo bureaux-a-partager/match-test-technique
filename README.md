@@ -1,4 +1,7 @@
 # UBIQ TEST
+## Prerequisites
+- Docker
+
 ## PHP test
 
 ### Task description
