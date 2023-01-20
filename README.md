@@ -13,6 +13,7 @@ Test your solutions by running one of:
 - ```make test-small``` to run your solution against small data list
 - ```make test-medium``` to run your solution against medium data list
 - ```make test-large``` to run your solution against large data list
+- ```make test-custom``` to 1,2,3,4,5 to run your solution against custom integer list
 
 ## Vue project
 ### Where to write your code
