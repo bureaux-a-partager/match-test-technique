@@ -45,11 +45,11 @@ Write an eficient algorithm for the following assumptions: N is an integer withi
 ### Test my solution
 In order to test your solution you can:
  - Run containers with ```make up``` (first build can take a few minutes to run)
- - ```make test-tiny``` to run your solution against tiny data list
- - ```make test-small``` to run your solution against small data list
- - ```make test-medium``` to run your solution against medium data list
- - ```make test-large``` to run your solution against large data list
- - ```make test-custom input=1,2,3,4,5,6``` to run your solution against custom integer list equals to ```[1,2,3,4,5,6]```
+ - ```make php-test-tiny``` to run your solution against tiny data list
+ - ```make php-test-small``` to run your solution against small data list
+ - ```make php-test-medium``` to run your solution against medium data list
+ - ```make php-test-large``` to run your solution against large data list
+ - ```make php-test-custom input=1,2,3,4,5,6``` to run your solution against custom integer list equals to ```[1,2,3,4,5,6]```
 
 ## Vue test
 ### Task description
