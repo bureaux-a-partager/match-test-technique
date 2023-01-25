@@ -112,10 +112,8 @@ class Runner
     {
         $len = count($data);
         $report->startTest('Custom lenght test: ' . $len . ' entries', $len);
-        foreach($this->getData($len) as $input) {
-            $res = $this->runSolution($input);
-            $report->addEntry(...$res);
-        }
+        $res = $this->runSolution($data);
+        $report->addEntry(...$res);
 
         $report->printLastTest();
     }
