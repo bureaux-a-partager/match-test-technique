@@ -13,6 +13,12 @@ class Runner
     const MEDIUM_LEN = 10000;
     const LARGE_LEN = 100000;
     const NB_TESTS = 1;
+    const TRICKY = [
+        [1,3,2,2,3,4,1],
+        [1,2,3,4,5,6],
+        [6,1,2,1,2,6],
+        [1,1000000,1,100000,100000,1]
+    ];
 
     private function runSolution(array $input): array
     {
@@ -32,6 +38,22 @@ class Runner
             $resCandidate,
             $timeCandidate,
         ];
+    }
+
+    /**
+     * Test the solution against different tricky config
+     *
+     * @return void
+     */
+    public function testTricky(Report $report): void
+    {
+        $report->startTest('Tricky test:', 6);
+        foreach(self::TRICKY as $input) {
+            $res = $this->runSolution($input);
+            $report->addEntry(...$res);
+        }
+
+        $report->printLastTest();
     }
 
     /**
@@ -126,11 +148,9 @@ class Runner
     protected function getData(int $nb): Generator
     {
         for ($n = 0; $n < self::NB_TESTS; $n++) {
-            $res = [1,2,1,2,5];
             for ($i = 0; $i < $nb; $i++) {
                 $res[] = rand(self::MIN, self::MAX);
             }
-            $res[] = 1;
             yield $res;
         }
     }

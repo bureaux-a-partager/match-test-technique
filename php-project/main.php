@@ -3,7 +3,7 @@
 require_once('./Runner.php');
 require_once('./Report.php');
 
-$availableTests = ['tiny', 'small', 'medium', 'large', 'custom'];
+$availableTests = ['tiny', 'small', 'medium', 'large', 'custom', 'tricky'];
 $testToRun = $argv[1] ?? 'tiny';
 $argsToPassToRunner = [new Report()];
 
