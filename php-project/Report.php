@@ -30,14 +30,14 @@ class Report
 
     public function printLastTest(): void
     {
-        print_r(PHP_EOL . $this->lastTestName . PHP_EOL . PHP_EOL);
+        print_r(PHP_EOL . $this->lastTestName);
 
         foreach ($this->tests[$this->lastTestName]['entries'] as $entry) {
             print_r(sprintf(
-                "Candidate solution: %s\nCandidate time:     %s seconds",
+                PHP_EOL . PHP_EOL . "Candidate solution: %s\nCandidate time:     %s seconds",
                 $entry['candidate']['solution'],
                 $this->formatFloat($entry['candidate']['time']),
-            ) . PHP_EOL . PHP_EOL);
+            ) . PHP_EOL);
 
             if ($entry['ubiq']['solution'] !== null) {
 
