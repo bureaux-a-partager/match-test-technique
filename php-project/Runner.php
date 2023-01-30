@@ -126,10 +126,11 @@ class Runner
     protected function getData(int $nb): Generator
     {
         for ($n = 0; $n < self::NB_TESTS; $n++) {
-            $res = [];
+            $res = [1,2,1,2,5];
             for ($i = 0; $i < $nb; $i++) {
                 $res[] = rand(self::MIN, self::MAX);
             }
+            $res[] = 1;
             yield $res;
         }
     }
