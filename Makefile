@@ -20,3 +20,5 @@ php-test-large: ## Run large tests
 	docker compose exec php bash -c "php main.php large"
 php-test-custom: ## Run large tests
 	docker compose exec php bash -c "php main.php custom $(input)"
+php-test-tricky: ## Run tricky tests
+	docker compose exec php bash -c "php main.php tricky"

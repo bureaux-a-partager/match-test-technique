@@ -13,18 +13,25 @@ class Runner
     const MEDIUM_LEN = 10000;
     const LARGE_LEN = 100000;
     const NB_TESTS = 1;
+    const TRICKY = [
+        [1,3,2,2,3,4,1],
+        [1,2,3,4,5,6],
+        [6,1,2,1,2,6],
+        [1,1000000,1,100000,100000,1],
+        [6,1,2,5,3,6],
+    ];
 
     private function runSolution(array $input): array
     {
         // Ubiq
         $now = microtime(true);
         $resUbiq = solutionUbiq($input);
-        $timeUbiq = microtime(true) - $now;
+        $timeUbiq = microtime(true) - $now + 0.000001;
 
         // Candidate
         $now = microtime(true);
         $resCandidate = solution($input);
-        $timeCandidate = microtime(true) - $now;
+        $timeCandidate = microtime(true) - $now + 0.000001;
 
         return [
             $resUbiq,
@@ -32,6 +39,22 @@ class Runner
             $resCandidate,
             $timeCandidate,
         ];
+    }
+
+    /**
+     * Test the solution against different tricky config
+     *
+     * @return void
+     */
+    public function testTricky(Report $report): void
+    {
+        $report->startTest('Tricky test:', 6);
+        foreach(self::TRICKY as $input) {
+            $res = $this->runSolution($input);
+            $report->addEntry(...$res);
+        }
+
+        $report->printLastTest();
     }
 
     /**
@@ -126,7 +149,6 @@ class Runner
     protected function getData(int $nb): Generator
     {
         for ($n = 0; $n < self::NB_TESTS; $n++) {
-            $res = [];
             for ($i = 0; $i < $nb; $i++) {
                 $res[] = rand(self::MIN, self::MAX);
             }
