@@ -26,12 +26,12 @@ class Runner
         // Ubiq
         $now = microtime(true);
         $resUbiq = solutionUbiq($input);
-        $timeUbiq = microtime(true) - $now;
+        $timeUbiq = microtime(true) - $now + 0.000001;
 
         // Candidate
         $now = microtime(true);
         $resCandidate = solution($input);
-        $timeCandidate = microtime(true) - $now;
+        $timeCandidate = microtime(true) - $now + 0.000001;
 
         return [
             $resUbiq,
